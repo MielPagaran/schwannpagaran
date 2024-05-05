@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .trophy {
+    position: relative;
+  }
+  
+  .cup {
+    width: 100px;
+    height: 150px;
+    background: linear-gradient(45deg, #ffd700, #cd7f32, #ffd700);
+    border-radius: 50%;
+    position: relative;
+    animation: shine 2s infinite;
+  }
+  
+  .base {
+    width: 80px;
+    height: 20px;
+    background: #cd7f32;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @keyframes shine {
+    0% {
+      background: linear-gradient(45deg, #ffd700, #cd7f32, #ffd700);
+    }
+    50% {
+      background: linear-gradient(45deg, #ffd700, #ffd700, #ffd700);
+    }
+    100% {
+      background: linear-gradient(45deg, #ffd700, #cd7f32, #ffd700);
+    }
+  }
+  
