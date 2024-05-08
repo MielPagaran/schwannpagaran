@@ -3,38 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: radial-gradient(ellipse at bottom, #0D1E31, #111);
-            overflow: hidden;
-        }
-        .star {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            height: 4px;
-            background: linear-gradient(-45deg, #5F91FF, rgba(0, 0, 255, 0));
-            border-radius: 999px;
-            filter: drop-shadow(0 0 6px #699BFF);
-            animation: tail 3s ease-in-out infinite, falling 3s ease-in-out infinite;
-        }
-        @keyframes tail {
-            0% { width: 0; }
-            30% { width: 100px; }
-            100% { width: 0; }
-        }
-        @keyframes falling {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(300px); }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Animated Pencil</title>
 </head>
 <body>
-    <div class="star"></div>
-    <!-- Add more stars here -->
+    <div class="canvas">
+        <h1>📝</h1>
+        <div class="pencil"></div>
+    </div>
 </body>
 </html>
