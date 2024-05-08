@@ -6,23 +6,30 @@
     <style>
         body {
             height: 100vh;
-            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(ellipse at bottom, #0D1E31, #111);
             overflow: hidden;
         }
         .star {
             position: absolute;
-            width: 2px;
-            height: 2px;
-            background: #fff;
-            animation: twinkle 5s infinite alternate;
+            left: 50%;
+            top: 50%;
+            height: 4px;
+            background: linear-gradient(-45deg, #5F91FF, rgba(0, 0, 255, 0));
+            border-radius: 999px;
+            filter: drop-shadow(0 0 6px #699BFF);
+            animation: tail 3s ease-in-out infinite, falling 3s ease-in-out infinite;
         }
-        @keyframes twinkle {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-100vh);
-            }
+        @keyframes tail {
+            0% { width: 0; }
+            30% { width: 100px; }
+            100% { width: 0; }
+        }
+        @keyframes falling {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(300px); }
         }
     </style>
 </head>
