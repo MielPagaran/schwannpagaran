@@ -1,62 +1,38 @@
-:root {
-    --pencil-color: #e60000;
-    --nib-color: #b38f00;
-    --lead-color: black;
-}
-
+/* styles.css */
 body {
-    background-color: #CCCCCC;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(ellipse at bottom, #0D1E31, #111);
+    overflow: hidden;
 }
 
-.canvas {
-    position: relative;
-    width: 500px;
-    height: 500px;
+.night {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(40deg);
+}
+
+.star {
+    position: absolute;
+    left: 50%;
     top: 50%;
-    left: 50%;
-    margin-left: -250px;
-    background-color: #FFFFFF;
+    height: 4px;
+    background: linear-gradient(-45deg, #5F91FF, rgba(0, 0, 255, 0));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px #699BFF);
+    animation: tail 3s ease-in-out infinite, falling 3s ease-in-out infinite;
 }
 
-h1 {
-    position: relative;
-    margin-top: 150px;
-    text-align: center;
+@keyframes tail {
+    0% { width: 0; }
+    30% { width: 100px; }
+    100% { width: 0; }
 }
 
-.pencil {
-    transform: translate(70%, 5%);
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 100px solid var(--pencil-color);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.pencil::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -20px;
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 100px solid var(--nib-color);
-}
-
-.pencil::after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 50px solid var(--lead-color);
+@keyframes falling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(300px); }
 }
