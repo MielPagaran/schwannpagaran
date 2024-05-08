@@ -1,7 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            animation: twinkle 5s infinite alternate;
+        }
+        @keyframes twinkle {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100vh);
+            }
+        }
+    </style>
+</head>
 <body>
-  <div class="full-wh">
-      <div class="bg-animation">
-          <!-- Stars will be added here -->
-      </div>
-  </div>
+    <div class="star"></div>
+    <!-- Add more stars here -->
 </body>
+</html>
