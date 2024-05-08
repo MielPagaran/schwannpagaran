@@ -3,59 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Quicksand', sans-serif;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: #000;
-        }
-
-        section {
-            position: absolute;
-            /* Add your styling for the animated pen here */
-        }
-
-        /* Add your keyframe animations and other CSS rules here */
-
-        /* Example animation for the pen */
-        @keyframes penAnimation {
-            0% {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Example styling for the pen */
-        section span {
-            display: block;
-            width: 20px;
-            height: 20px;
-            background: #fff;
-            margin: 10px;
-            animation: penAnimation 0.5s ease-in-out alternate infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Animated Dog</title>
 </head>
 <body>
-    <section>
-        <!-- Add your pen elements (e.g., <span></span>) here -->
-        <span></span>
-        <span></span>
-        <!-- Add more spans for additional pen elements -->
-    </section>
+    <div class="dog">
+        <div class="heart heart--1"></div>
+        <div class="heart heart--2"></div>
+        <div class="heart heart--3"></div>
+        <div class="heart heart--4"></div>
+        <div class="head">
+            <div class="ear ear--left"></div>
+            <div class="ear ear--right"></div>
+            <div class="nose"></div>
+            <div class="face">
+                <div class="eye eye--left"></div>
+                <div class="eye eye--right"></div>
+                <div class="mouth"></div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="chest"></div>
+            <div class="back"></div>
+            <div class="legs">
+                <div class="legs__front legs__front--left"></div>
+                <div class="legs__front legs__front--right"></div>
+                <div class="legs__back legs__back--left"></div>
+                <div class="legs__back legs__back--right"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+AI-generated code. Review and use carefully. More info on FAQ.
+And here’s the corresponding CSS (styles.css):
+
+CSS
+
+html, body {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #272F42;
+    background-size: fill;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.dog {
+    position: absolute;
+    /* Add your dog styling here */
+    /* You can adjust the colors, shapes, and animations as desired */
+}
+/* Add other CSS rules for the dog's body parts (head, eyes, legs, etc.) */
